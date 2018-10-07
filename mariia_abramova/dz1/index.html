@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hometask 1</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <section>
+            <h2>Guess the number</h2>
+            <label>Pick a number from 1 to 10
+                <input id = "guessNumber" type = "number"  value = "1" step = "1" min = "1" max = "10" pattern = "[1-10]">
+            </label>
+            <button onclick = "guessNumber()">Go</button>
+            <output id = "guessResult"></output>
+    </section>
+    <section>
+            <h2>JavaScript calculator</h2>
+            <label>Number 1
+                <input id = "calcNumber1" value ="1" type="number">
+            </label>
+            <label>Number 2
+                <input id = "calcNumber2" value ="1" type="number">
+            </label>
+            <label>Operation
+                <select>
+                    <option value = "mult">*</option>
+                    <option value = "div">/</option>
+                    <option value = "add">+</option>
+                    <option value = "sub">-</option>
+                </select>
+            </label>
+            <button onclick = "calculator()">Go</button>
+            <output id = "calcResult"></output>
+
+    </section>
+    <section>
+            <h2>Check if a string is a palindrome</h2>
+            <label>Write something
+                <input id = "palindInput" type = "text" pattern = "lol">
+            </label>
+            <button onclick="palindCheck()">Go</button>
+            <output id = "palindResult"></output>
+    </section>  
+    <script src="guess_number.js"></script>
+    <script src="calc.js"></script>
+    <script src="palindrome.js"></script>
+</body>
+</html>
