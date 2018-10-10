@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Palindrome</title>
+</head>
+<body>
+<script type="text/javascript">
+	var palindrome = prompt('Enter word or phrase');
+
+function isPalindrome(str) {
+	var reversed = str.split('').reverse().join('');
+	
+	if(reversed===str) {
+		alert("It is a palindrome!");
+	}
+	else {
+		alert("It is not a palindrome!");
+	}
+	
+		
+}
+
+isPalindrome(palindrome);
+</script>
+</body>
+</html>
