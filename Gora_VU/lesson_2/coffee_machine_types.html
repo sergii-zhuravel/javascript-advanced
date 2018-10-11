@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coffee machine types</title>
+	<style>
+		.header {width: 50%;min-height:70px;padding:10px;border-radius:10px;background-color:indigo;color: white;margin:10px auto;text-align: center;font-size: 22px;}
+		.green {background-color:lightgreen;color:black;border-radius: 10px;margin:10px;padding:5px;font-size: 16px;text-align: left;}
+		.header .green,.header .red {text-align: center;}
+		.flex {display: flex;justify-content: space-around;}
+		.flex .arrow {font-size:36px;font-weight: bold;color: indigo;}
+		.pink .arrow {color: #545454;}
+		.blue .arrow {color: #878787;}
+		.flex.blue {width: 50%;float: right;}
+		.flex.blue+.flex {clear: both;width: 50%;float: right;}
+		.flex .type {width: 50%;min-height: 130px;padding-top: 10px;border-radius: 10px;background-color: #545454;color: white;text-align: center;font-size: 22px;margin:10px;}
+		.red {background-color:lightpink;color:black;border-radius: 10px;margin:10px;padding:5px;font-size: 16px;text-align: left;}
+		.types {width:25%;min-height: 330px;padding-top: 10px;border-radius: 10px;background-color: #878787;color: white;text-align: center;font-size: 22px;margin:10px;}
+		.sub {min-height: 230px;width:50%;padding-top: 10px;border-radius: 10px;background-color: #cebebe;color: black;text-align: center;font-size: 22px;margin:10px;position: relative;}
+		.sub:before {content: "Объект";position: absolute;top:-20px;left: -25px;background-color: rgb(31, 221, 110,0.8);color:white;border-radius:10px;padding:5px 10px;}
+		.function {background-color:indigo;color:white;border-radius: 10px;margin:10px;padding:5px;font-size: 16px;text-align: left;}
+		.encapsulation {background-color:darkgrey;color:black;border-radius: 10px;margin:10px;padding:5px;font-size: 16px;text-align: left;}
+		.polimorphism {background-color:#0e1654;color:white;border-radius: 10px;margin:10px;padding:5px;font-size: 16px;text-align: left;}
+		.abstract {background-color:#077a42;color:white;border-radius: 10px;margin:10px;padding:5px;font-size: 16px;text-align: center;}
+		.header .function {background-color: #525c8e;text-align: center;}
+	</style>
+</head>
+<body>
+	<div class="header">
+		Кухонная техника
+		<div class="abstract">Абстрактный класс</div>
+		<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+	</div>
+
+	<div class="flex">
+		<div class="arrow">&#9660;</div>
+	</div>
+
+	<div class="header">
+		Кофемолка
+		<div class="green">Свойство: аппарат для измельчения кофейных зерен</div>
+		<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+	</div>
+
+	<div class="flex">
+		<div class="arrow">&#9660;</div>
+		<div class="arrow">&#9660;</div>
+	</div>
+	
+	<div class="flex">
+		<div class="type">Ручная
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="green">Новое свойство: помол зёрен происходит благодаря механическому вращению</div>
+			<div class="polimorphism">Полиморфизм: всё ещё измельчает зёрна, но способ измельчения - механическое вращение рукой</div>
+			<div class="encapsulation">Инкапсуляция: задача пользователя - крутить ручку, сам процесс измельчения зёрен неизвестен для простого пользователя</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+		</div>
+		<div class="type">Электрическая
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="green">Новое свойство: помол зёрен происходит благодаря электрической энергии</div>
+			<div class="polimorphism">Полиморфизм: всё ещё измельчает зёрна, но способ измельчения - автоматическое вращение за счёт электричества</div>
+			<div class="encapsulation">Инкапсуляция: задача пользователя - вставить шнур в розетку и нажать кнопку, сам процесс измельчения зёрен неизвестен для простого пользователя</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+		</div>
+	</div>
+
+	<div class="flex pink">
+		<div class="arrow">&#9660;</div>
+		<div class="arrow">&#9660;</div>
+		<div class="arrow">&#9660;</div>
+		<div class="arrow">&#9660;</div>
+	</div>
+
+	<div class="flex">
+		<div class="types">Европейская
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="red">Наследуемое св-во: Помол зёрен благодаря механическому вращению</div>
+			<div class="green">Новое св-во: Мини-мельница со специальным ящичком для измельчённых зёрен</div>
+			<div class="green">Новое св-во: возможен как мелкий, так и крупный помол</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+		</div>
+		<div class="types">Восточная
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="red">Наследуемое св-во: Помол зёрен благодаря механическому вращению</div>
+			<div class="green">Новое св-во: Цилиндрическая форма и съёмная ручка</div>
+			<div class="green">Новое св-во: возможен только мелкий помол</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+		</div>
+		<div class="types">Ротационная
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="red">Наследуемое св-во: помол благодаря электрической энергии</div>
+			<div class="green">Новое св-во: ёмкость для зёрен оснащена ротационными ножами</div>				
+			<div class="encapsulation">Инкапсуляция: детали процесса измельчения неизвестны простому пользователю</div>
+			<div class="polimorphism">Полиморфизм: результат одинаков как при измельчении ротационными ножами, так и при измельчении жерновами (зёрна измельчены)</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+		</div>
+		<div class="types">Жерновая
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="red">Наследуемое св-во: помол благодаря электрической энергии</div>
+			<div class="green">Новое св-во: измельчение происходит жерновами в виде конических или цилиндрических дисков</div>
+			<div class="encapsulation">Инкапсуляция: детали процесса измельчения неизвестны простому пользователю</div>
+			<div class="polimorphism">Полиморфизм: результат одинаков как при измельчении ротационными ножами, так и при измельчении жерновами (зёрна измельчены)</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+		</div>
+	</div>
+
+	<div class="flex blue">
+		<div class="arrow">&#9660;</div>
+		<div class="arrow">&#9660;</div>
+	</div>
+
+	<div class="flex">
+		<div class="sub">Bosch MKM 6003
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="red">Наследуемое св-во: помол благодаря электрической энергии</div>
+			<div class="red">Наследуемое св-во: оснащена ротационными ножами</div>
+			<div class="green">Новое св-во: цвет: чёрный</div>
+			<div class="green">Новое св-во: вместимость: 75 г</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+		</div>
+		<div class="sub">Delonghi KG 79
+			<div class="red">Наследуемое св-во: аппарат для измельчения кофейных зерен</div>
+			<div class="red">Наследуемое св-во: помол благодаря электрической энергии</div>
+			<div class="red">Наследуемое св-во: измельчение жерновами</div>
+			<div class="green">Новое св-во: цвет: чёрный</div>
+			<div class="green">Новое св-во: вместимость: 120 г</div>
+			<div class="function">Функция: облегчает приготовление пищи или напитков</div>
+			<div class="function">Функция: измельчает кофейные зёрна</div>
+			<div class="function">Новая функция: несколько режимов, выбор степени помола</div>
+		</div>
+	</div>
+</body>
+</html>
