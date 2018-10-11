@@ -1,0 +1,34 @@
+HTML
+
+Result:
+36 of 40
+90%
+
+You can be proud of yourself!
+
+Time Spent
+9:13
+
+-------------------------------------
+CSS
+
+Result:
+24 of 25
+96%
+
+You can be proud of yourself!
+
+Time Spent
+13:50
+
+-------------------------------------
+JS
+
+Result:
+22 of 25
+88%
+
+You can be proud of yourself!
+
+Time Spent
+17:30

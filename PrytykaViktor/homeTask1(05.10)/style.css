@@ -1,0 +1,13 @@
+body{
+    padding: 0 30px;
+}
+section{
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+}
+section:last-child{
+    border-bottom: none;
+}
+input[type="text"]{
+    width: 100px;
+}
