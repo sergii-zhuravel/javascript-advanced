@@ -5,7 +5,7 @@ https://www.w3schools.com/js/default.asp (W3Schools)
 
 https://developer.mozilla.org/uk/ (MDN)
 
-https://github.com/getify/You-Dont-Know-JS (YDKJS) 1
+https://github.com/getify/You-Dont-Know-JS (YDKJS)
 
 ### Практика и плейграунд
 https://jsfiddle.net/
