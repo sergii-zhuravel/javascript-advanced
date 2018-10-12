@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="style.css">
+    <title>Home work 1 (04.10)</title>
+</head>
+<body>
+    <h1>Home work 1 (04.10)</h1>
+    <section>
+        <header>
+            <h2>Угадай число</h2>
+            <p>
+                <i>Написать JavaScript программу, которая генерирует число от 1 до 10, затем запрашивает число от 1 до 10 от пользователя.
+                Если число совпадает - выдать сообщение "Угадал", если не совпадает - выдать сообщение "Повезет в следующий раз"</i>
+            </p>
+        </header>
+        <div>
+            <button onclick="isLucky()">Испытать удачу</button>
+        </div>
+    </section>
+    <section>
+        <header>
+            <h2>JavaScript калькулятор</h2>
+            <p>
+                <i>Написать простейший JavaScript калькулятор с двумя полями для ввода 2х чисел от пользователя
+                и четырмя арифметическими операциями - сложение, вычитание, умножение и деление </i>
+            </p>
+        </header>
+        <div>
+            <form action="none" onsubmit="event.preventDefault();">
+                <input id="calcNum1" type="text">
+                <button onclick="calculate(event)">+</button>
+                <button onclick="calculate(event)">-</button>
+                <button onclick="calculate(event)">/</button>
+                <button onclick="calculate(event)">*</button>
+                <input id="calcNum2" type="text">
+                <p id="calculateResult">0</p>
+            </form>
+        </div>
+    </section>
+    <section>
+        <header>
+            <h2>Проверка на полиндром</h2>
+            <p>
+                <i>Написать функцию которая определяет является ли слово или фраза (без учета пробелов) палиндромом</i><br>
+                <i>Пример полиндрома - топот, nurses run</i>
+            </p>
+        </header>
+        <div>
+            <button onclick="isPalindrome()">Вызвать проверку на палиндром</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
