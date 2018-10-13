@@ -22,6 +22,10 @@ var bird = {
   print( sparrow.jumps ); // true
   print( sparrow.eats ); // true
 
+for (var key in sparrow) {
+  if (sparrow.hasOwnProperty(key)) 
+  console.log(key + " - " + sparrow[key]);
+}
 
   ///////
   function print(m) {console.log(m)}
