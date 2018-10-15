@@ -1,0 +1,24 @@
+html - 
+Result:
+38 of 40
+95%
+You can be proud of yourself!
+Time Spent
+8:37
+
+==========================================
+css-
+Result:
+25 of 25
+100%
+Perfect!!!
+Time Spent
+5:46
+
+==========================================
+js - 
+20 of 25
+80%
+Almost! Study a little more and take the test again!
+Time Spent
+5:31
