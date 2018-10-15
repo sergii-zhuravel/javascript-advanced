@@ -84,6 +84,3 @@ Sparrow.prototype = bird
 var sparrow = new Sparrow("Sparrow 1")
 
 console.log(sparrow.eats)
-print(1)
-
-print = (message) => console.log(message)
