@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <fieldset style="display: inline-block;">
+        <legend>Задание 1</legend>
+        <p>
+                Написать JavaScript программу, которая генерирует число от 1 до 10, затем запрашивает число от 1 до 10 от пользователя. <br>
+                Если число совпадает - выдать сообщение "Угадал", если не совпадает - выдать сообщение "Повезет в следующий раз"
+        </p>
+        <input id="for_random" type="number">
+        <br><br>
+        <button id="check_random">Проверить</button>
+    </fieldset>
+    
+    <br><br>
+
+    <fieldset style="display: inline-block;">
+        <legend>Задание 2</legend>
+        <p>
+            Написать простейший JavaScript калькулятор с двумя полями для ввода 2х чисел от пользователя и четырмя арифметическими операциями - сложение, вычитание, умножение и деление
+        </p>
+        <input id="calc_1" type="number">
+        <input id="calc_2" type="number">
+        <br><br>
+        <button id="calc_plus">+</button>
+        <button id="calc_minus">-</button>
+        <button id="calc_divide">/</button>
+        <button id="calc_multiply">*</button>
+        <span>Результат: </span><span id="calc_result"></span>
+    </fieldset>
+
+    <br><br>
+
+    <fieldset style="display: inline-block;">
+        <legend>Задание 3</legend>
+        <p>
+            Написать функцию которая определяет является ли слово или фраза (без учета пробелов) палиндромом
+        </p>
+        <input id="palindrome" type="text">
+        <br><br>
+        <button id="check_palindrome">Проверить слово</button>
+    </fieldset>
+
+    <script>
+        document.getElementById('check_random').onclick = function(){
+            var randomNumber = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+            var userNumber = +document.getElementById('for_random').value;
+            if (userNumber < 1 || userNumber > 10 || document.getElementById('for_random').value.length == 0) {
+                alert('Число должно быть от 1 до 10');
+            } else if (userNumber == randomNumber) {
+                alert('Угадал');
+            } else {
+                alert('Повезет в следующий раз. Правильный ответ был ' + randomNumber);
+            };
+            document.getElementById('for_random').value = '';
+        };
+
+        function calcResult(operation){
+            var firstCalc = +document.getElementById('calc_1').value;
+            var secondCalc = +document.getElementById('calc_2').value;
+            if (document.getElementById('calc_1').value.length == 0 || document.getElementById('calc_2').value.length == 0) {
+                return false;
+            };
+            var calcResult;
+            if (operation == '+') {
+                calcResult = firstCalc + secondCalc;
+            } else if (operation == '-') {
+                calcResult = firstCalc - secondCalc;
+            } else if (operation == '/') {
+                calcResult = firstCalc / secondCalc;
+            } else if (operation == '*') {
+                calcResult = firstCalc * secondCalc;
+            };
+            document.getElementById('calc_result').innerText = calcResult;
+        };
+        document.getElementById('calc_plus').onclick = function(){calcResult('+')};
+        document.getElementById('calc_minus').onclick = function(){calcResult('-')};
+        document.getElementById('calc_divide').onclick = function(){calcResult('/')};
+        document.getElementById('calc_multiply').onclick = function(){calcResult('*')};
+
+        document.getElementById('check_palindrome').onclick = function(){
+            var palindromeText = document.getElementById('palindrome').value;
+            if (palindromeText.length < 3) {
+                alert('Должно быть введено хотя бы три символа');
+                return false;
+            };
+            var clearText = [];
+            for (var i = 0; i < palindromeText.length; i++) {
+                if (palindromeText[i] != ' ') {
+                    clearText.push(palindromeText[i]);
+                };
+            };
+            var fullArray = clearText.length - 1;
+            var halfArray = parseInt(clearText.length /2);
+            for (var i = 0; i < halfArray; i++) {
+                if (clearText[i] != clearText[fullArray - i]) {
+                    alert('Текст не является палиндромом');
+                    return false;
+                };
+            };
+            alert('Текст является палиндромом');
+        };
+    </script>
+
+</body>
+</html>
