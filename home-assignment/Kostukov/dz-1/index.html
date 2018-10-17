@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div>
+            <label for="enteredNumberOne">Первое число</label>
+            <input id="enteredNumberOne" type="text">
+        </div>
+        <div>
+            <label for="enteredNumberTwo">Второе число</label>
+            <input id="enteredNumberTwo" type="text">
+        </div>
+        <div>
+            <div id="man">
+                <button onclick="plus()">+</button>
+                <button onclick="minus()">-</button>
+                <button onclick="times()">*</button>
+                <button onclick="divide()">/</button>
+            </div>
+            <button onclick="reset()">Очистить</button>
+            <div>Результат
+                <div id="result"></div>
+            </div>
+        </div>
+        <div>ПРОВЕРКА НА ПАЛИНДРОМ
+            <input id="palindrom" type="text">
+            <button onclick="verification()">Проверить</button>
+            <div>Результат</div>
+            <div id="palResult"></div>
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>
