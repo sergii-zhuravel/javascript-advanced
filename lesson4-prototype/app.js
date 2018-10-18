@@ -56,6 +56,10 @@ var bird = {
 
 // new Function()
 
+// function TestFunction() {}
+
+// Show contructor and prototype property
+
 // var bird = {
 //   eats: true
 // };
@@ -71,16 +75,16 @@ var bird = {
 
 // doesn't work in IE 10-
 
-var bird = {
-  eats: true
-}
+// var bird = {
+//   eats: true
+// }
 
-function Sparrow(name) {
-  this.name = name;
-}
+// function Sparrow(name) {
+//   this.name = name;
+// }
 
-Sparrow.prototype = bird
+// Sparrow.prototype = bird
 
-var sparrow = new Sparrow("Sparrow 1")
+// var sparrow = new Sparrow("Sparrow 1")
 
-console.log(sparrow.eats)
+// console.log(sparrow.eats)
