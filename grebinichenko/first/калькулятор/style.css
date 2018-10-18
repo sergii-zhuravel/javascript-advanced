@@ -1,0 +1,23 @@
+div{
+    box-sizing: border-box;
+}
+.bloack{
+    width: 360px;
+    height: 500px;
+    background-color: grey;
+    border:1px solid black;
+    border-radius:17px; 
+    margin:0 auto;
+    margin-top:20px;
+    padding: 7px;
+}
+.number{
+    margin: 10px 0 10px 0;
+}
+.but{
+    padding: 0;
+    margin: 0 auto;
+}
+.form{
+    margin: 20px;
+}
