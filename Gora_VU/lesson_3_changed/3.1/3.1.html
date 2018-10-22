@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza</title>
+    <style>
+        div {
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+
+            <input type="checkbox" class="top"><span>Classic</span>
+            <input type="checkbox" class="top"><span>Cheese</span>
+            <input type="checkbox" class="top"><span>Vegetarian</span>
+            <input type="checkbox" class="top"><span>Seafood</span>
+            <button onclick="obj.chooseTop()">Choose topping</button>
+      
+            <div class="cont">
+                    <div class="sub">Cheese bortik</div>
+                    <div class="sub">Normal bortik</div>
+                    <button onclick="obj.bortik()">Choose bortik</button>
+            </div>
+            
+            <div class="cont">
+                    <div class="sub">Small</div>
+                    <div class="sub">Medium</div>
+                    <div class="sub">Large</div>
+                    <button onclick="obj.size()">Choose size</button>
+            </div>
+           
+            <div>
+                <button onclick="obj.makePizza()">Result</button>
+                <button onclick = "obj.packPizza()">Pack pizza</button>
+            </div>
+           
+        
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script src="3.1.js"></script>
+</body>
+</html>
