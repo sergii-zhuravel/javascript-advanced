@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // ------------------------
+        // Задача 4.1
+        // ------------------------
+        // Написать функцию makeAdder(n) которая получает целое число и возвращает функцию которая увеличивает переданный ей
+        // параметр на заданное заранее значение (использовать замыкание)
+
+        function makeAdder(n) {
+            return function(n2){
+                return n + n2;
+            }
+        };
+
+        var add10 = makeAdder(10);
+
+        console.log('Task 4.1 result - ' + add10(41));
+
+
+        // ------------------------
+        // Задача 4.2
+        // ------------------------
+        // 1) Создать иерархию объектов с помощью прототипного наследования (3 уровня)
+        // 2) Создать туже самую цепочку насследования но с помощью функционального наследования (создание объектов с помощью
+        // конструктора - new и задание прототипа через Function.prototype)
+
+        var objZero = {
+            haveSetting1 : true
+        }
+
+        var objFirst = {
+            haveSetting2 : true
+        }
+
+        objFirst.__proto__ = objZero;
+
+        var objSecond = {
+            haveSetting3 : true
+        }
+
+        objSecond.__proto__ = objFirst;
+
+        var objArray = [objZero, objFirst, objSecond];
+
+        console.log ('Task 4.2.1 results:')
+        for (var i = 0; i < objArray.length; i++) {
+            for (key in objArray[i]) {
+                console.log('In first array Object ' + i + ' ' + key + ' ' + objArray[i][key]);
+            }
+        }
+        
+        
+        function ObjectMaker0(){
+            this.haveSetting1 = true
+        }
+
+        function ObjectMaker1(){
+            this.haveSetting2 = true
+        }
+
+        function ObjectMaker2(){
+            this.haveSetting3 = true
+        }
+
+        var newObjZero = new ObjectMaker0;
+
+        ObjectMaker1.prototype = newObjZero;
+
+        var newObjFirst = new ObjectMaker1; 
+
+        ObjectMaker2.prototype = newObjFirst;
+
+        var newObjSecond = new ObjectMaker2;
+        
+        var objArray2 = [newObjZero, newObjFirst, newObjSecond];
+
+        console.log ('Task 4.2.2 results:')
+        for (var i = 0; i < objArray2.length; i++) {
+            for (key in objArray2[i]) {
+                console.log('In second array Object ' + i + ' ' + key + ' ' + objArray2[i][key]);
+            }
+        }
+
+    </script>
+</body>
+</html>

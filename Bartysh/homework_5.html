@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // ------------------------
+        // Задача 5.1
+        // ------------------------
+        // Создать 2 класса ES6 с конструкторами, один класс с конструктором без параметров и второй класс с конструктором с 2 параметрами
+
+        class AtgmCreate {
+            constructor(){
+                this.name = 'This is new ATGM';
+            }
+        }
+
+        class AdvancedAtgm extends AtgmCreate {
+            constructor(a, b){
+                super(name);
+                this.meters = a;
+                this.principe = b;
+            }
+            
+        }
+
+        var newAtgm1 = new AtgmCreate;
+        var newAtgm2 = new AdvancedAtgm(2500, 'wire-guided');
+        var newAtgm3 = new AdvancedAtgm(3800, 'optical-guided');
+
+        var atgmArray = [newAtgm1, newAtgm2, newAtgm3];
+        
+        console.log ('Task 5.1 results:')
+        for (var i = 0; i < atgmArray.length; i++) {
+            console.log(atgmArray[i].name + ' number ' + (i + 1));
+            if (atgmArray[i].meters) {console.log('His work dinstance - ' + atgmArray[i].meters + ' meters.')};
+            if (atgmArray[i].principe) {console.log('His principe of work is ' + atgmArray[i].principe + '.')};
+        };
+
+        // ------------------------
+        // Задача 5.2 
+        // ------------------------
+        // 1) Создать иерархию объектов из задания 4.2 с помощью классов ES6
+        
+        class ObjectLevelZero {
+            constructor(){
+                this.name = 'Created object';
+                this.haveSettings1 = true;
+            }
+        }
+
+        class ObjectLevelFirst extends ObjectLevelZero {
+            constructor(){
+                super();
+                this.haveSettings2 = true;
+            }
+        }
+
+        class ObjectLevelSecond extends ObjectLevelFirst {
+            constructor(){
+                super();
+                this.haveSettings3 = true;
+            }
+        }
+
+        var myObj0 = new ObjectLevelZero;
+        var myObj1 = new ObjectLevelFirst;
+        var myObj2 = new ObjectLevelSecond;
+
+        var createdObj = [myObj0, myObj1, myObj2];
+        console.log ('Task 5.2 results:')
+        for (var i = 0; i < createdObj.length; i++) {
+            console.log('Created object number - ' + (i + 1));  
+            for (key in createdObj[i]) {
+                console.log(key + '  - ' + createdObj[i][key]);
+            }
+        };
+    </script>
+</body>
+</html>
