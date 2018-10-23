@@ -60,13 +60,19 @@ var bird = {
 
 // Show contructor and prototype property
 
-// var bird = {
+// function TestFunction() {
+//   this.name = "Kolya"
+// }
+// var obj = new TestFunction()
+// console.log(obj.name)
+
+// var Bird = {
 //   eats: true
-// };
+// }
 
 // function Sparrow(name) {
 //   this.name = name;
-//   this.__proto__ = bird;
+//   this.__proto__ = Bird;
 // }
 
 // var sparrow = new Sparrow("Sparrow");
@@ -80,11 +86,39 @@ var bird = {
 // }
 
 // function Sparrow(name) {
-//   this.name = name;
+//   this.name = name
 // }
 
 // Sparrow.prototype = bird
 
 // var sparrow = new Sparrow("Sparrow 1")
+// var sparrow2 = new Sparrow("Sparrow 2")
 
+// console.log(sparrow.name)
 // console.log(sparrow.eats)
+// console.log(sparrow.__proto__)
+// console.log(sparrow2.name)
+// console.log(sparrow2.eats)
+// console.log(sparrow2.__proto__)
+
+
+function SimpleCalculator() {
+  this.a = 5
+  this.b = 10
+  // this.sum = function(){console.log(this.a + this.b)}
+}
+SimpleCalculator.prototype.sum = function(){console.log(this.a + this.b)}
+function AdvancedCalculator() {
+  //SimpleCalculator.call(this)
+  this.a = 5
+  this.b = 10
+  this.sub = function(){console.log(this.a - this.b)}
+}
+
+AdvancedCalculator.prototype = Object.create(SimpleCalculator.prototype)
+var simpleCalc = new SimpleCalculator()
+
+simpleCalc.sum()
+var advCalc = new AdvancedCalculator()
+advCalc.sub()
+advCalc.sum()
