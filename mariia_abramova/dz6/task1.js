@@ -12,18 +12,18 @@
 // Для обновления контента тега span - использовать соответствующие свойсво элемента
 
 
-// var browser = document.getElementsByTagName("span")[1];
+var browser = document.getElementsByTagName("span")[1];
 
-// var userAgent = window.navigator.userAgent;
+var userAgent = window.navigator.userAgent;
 
-// // last word in userAgent
-// var nameVersion =userAgent.split(" ").splice(-1).join("");
+// last word in userAgent
+var nameVersion =userAgent.split(" ").splice(-1).join("");
 
-// // only browser name 
-// var reg = /[a-zA-Z]/g;
-// var name = nameVersion.match(reg).join("")=="OPR" ? "Opera" : nameVersion.match(reg).join("");
+// only browser name 
+var reg = /[a-zA-Z]/g;
+var name = nameVersion.match(reg).join("")=="OPR" ? "Opera" : nameVersion.match(reg).join("");
 
-// browser.innerText = name;
+browser.innerText = name;
 
 
 // ------------------------
@@ -33,11 +33,14 @@
 // Как проверить что в body вообще есть элементы?
 // (написать код)
 
-var style = document.documentElement.lastElementChild.lastElementChild.style;
-console.log(style)
+
 
 var body = document.documentElement.lastElementChild; 
 
 var elements = (body.children.length )? "body is NOT empty" : "body is empty"
+if (elements){
+    var style = document.documentElement.lastElementChild.lastElementChild.style;   
+    console.log(style)
+}
 
 console.log(elements);
