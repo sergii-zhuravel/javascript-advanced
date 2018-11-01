@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <span>111</span>
+        <p>333</p>
+        <div>
+            <span>Browser name: </span><span>BROWSERNAME</span>
+        </div>
+    
+    <script>
+        // ------------------------
+        // Задача 6.1
+        // ------------------------
+        // Дано:
+        // HTML страница в которой есть только такой код
+        // <div>
+        // <span>Browser name: </span><span>BROWSERNAME</span>
+        // </div>
+
+        // Написать JavaScript код, который выведет вместо BROWSERNAME - данные текущего браузера. Попробуйте подобрать одно из свойств
+        // объекта navigator. Проверьте свойство в разных браузерах.
+        // Для нахождения объекта куда нужно вставить контент - использовать изученные методы навигации по DOM элементам
+        // Для обновления контента тега span - использовать соответствующие свойсво элемента
+            
+        document.getElementsByTagName('div')[0].lastElementChild.innerText = navigator.appName;
+        
+        // ------------------------
+        // Задача 6.2
+        // ------------------------
+        // Как получить доступ к стилям последнего элемента тега body?
+        // Как проверить что в body вообще есть элементы?
+        // (написать код)
+
+        if (document.body.children.length > 0) {
+            for (var i = document.body.children.length - 1; i > 0; i--) {
+                if (document.body.children[i].tagName.toLowerCase() != 'script') {
+                    var computedStyle = getComputedStyle(document.body.children[i]);
+                    for (key in computedStyle) {
+                        console.log('last element ' + key + ' : ' + computedStyle[key]);
+                    }
+                    i = 0;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
