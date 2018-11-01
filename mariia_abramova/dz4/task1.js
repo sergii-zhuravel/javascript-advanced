@@ -75,7 +75,7 @@ var mammal2= new Mammal()
 
 Dog.prototype =  mammal2;
 var dog2= new Dog()
-Buldog.prototype =  dog2;
+Buldog.prototype =  dog2;a
 var buldog2 = new Buldog();
 
 console.log(buldog2.voice());
