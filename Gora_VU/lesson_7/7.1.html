@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7.1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div>
+        <input id="todo-input" value="Placeholder" /> <button id="button-add">Add</button>
+        <p>ToDo List:</p>
+        <ol id="todo-list">
+            <li class="todo-item">
+                First todo
+                <span class="delete-button" onclick="removeItem(event)" title="Delete current item">x</span>`
+        </ol>
+</div>
+<script>
+// Задача 7.1
+// Написать JavaScript код, который:
+// 1. Найдет todo-input и получит значение введенное в поле
+// 2. Найдет элемент li
+// 3. Создаст deep клон элемента li
+// 4. Поменять только текст у клона элемента li
+var toDoElem = document.getElementById("todo-input").value;
+var liElem = document.getElementsByClassName("todo-item")[0];
+var liElem2 = liElem.cloneNode(true);
+liElem2.innerHTML = "Second todo";
+var ol = document.getElementById("todo-list");
+ol.appendChild(liElem2);
+</script>  
+</body>
+</html>
