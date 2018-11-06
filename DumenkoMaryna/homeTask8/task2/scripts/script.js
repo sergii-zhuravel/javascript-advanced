@@ -17,5 +17,4 @@ function removeItem(e) {
     // для кнопки на которой выполнили клик
     var todoItem = e.target.parentElement;
     todoItem.remove();
-    console.log(todoItem);
 }
