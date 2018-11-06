@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home task 8.2</title>
+</head>
+<body>
+	<style>
+		.delete-button{
+			padding-left: 5px;
+			color: red;
+			font-size: 1.2rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	</style>
+
+	<div>
+        <input id="todo-input" value="" /> <button id="button-add">Add</button>
+        <p>ToDo List:</p>
+        <ol id="todo-list">
+            <li class="todo-item">
+                First todo
+                <span class="delete-button" onclick="removeItem(event)" title="Delete current item">x</span>
+            </li>
+        </ol>
+    </div>
+
+	<script src="scripts/script.js"></script>
+</body>
+</html>
