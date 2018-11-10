@@ -1,13 +1,18 @@
-makeRequest('https://jsonplaceholder.typicode.com/posts', 'GET', null);
+var url = 'https://jsonplaceholder.typicode.com/posts'
+makeRequest(url, 'GET', null);
 
-makeRequest(url, 'POST', 'title=foo&body=test&userId=1');
+makeRequest('https://jsonplaceholder.typicode.com/posts', 'POST', 'title=foo&body=test&userId=1');
 
 function doSomethingWithConent(httpRequest) {
 
     if (httpRequest.readyState == 4) {
-        if (httpRequest.status == 200 || httpRequest.status == 201) {
-            console.log(JSON.parse(httpRequest.responseText));
-        } else {
+        if (httpRequest.status == 200) {
+            var obj = JSON.parse(httpRequest.responseText);
+        } else if(httpRequest.status == 201) {
+            var getUrl = url + '/' + JSON.parse(httpRequest.responseText).id;
+            makeRequest(getUrl, "GET", null);
+        }
+        else {
             console.error('С запросом возникла проблема.');
         }
     }

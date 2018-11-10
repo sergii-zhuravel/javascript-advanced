@@ -23,9 +23,6 @@ function initBoard() {
  initPanel('todo', state.todo);
  initPanel('inprogress', state.inprogress);
  initPanel('done', state.done);
-//  var todoPanel = document.getElementById('todo');
-//  var inprogressPanel = document.getElementById('todo');
-//  var todoPanel = document.getElementById('todo');
 }
 
 function initPanel(key, todoList) {
@@ -38,8 +35,8 @@ function initPanel(key, todoList) {
 function createTodoElement(id, title) {
   var todoElement = document.createElement("span");
   todoElement.id = id;
-  todoElement.draggable = true;
-  todoElement.ondragstart=onDragStart;
+  todoElement.draggable = true; // for drag and drop
+  todoElement.ondragstart=onDragStart; // for drag and drop
   todoElement.textContent = title;
   return todoElement;
 }
