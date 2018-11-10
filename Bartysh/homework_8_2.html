@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", myFunction);
+        function myFunction() {
+          console.log('Hello from My Function');
+        }
+        console.log('Hello from main JS code');
+
+        // Вопрос: 
+        // 1. В каком порядке выведется текст?
+        // 2. Есть ли в коде ошибки?
+
+        // сначала отработает myFunction, выведя текст "Hello from My Function", потом отработает остальной код, выведя "Hello from main JS code"
+        // ошибка - в первой строке вместо передачи переменной myFunction в качестве аргумента вызывается сама функция - myFunction().
+        // если убрать круглые скобки, т.е. заменить вызов на передачу переменной, то сначала отработает функция из основного тела скрипта, затем уже по событию загрузки всего DOM-контента отработает myFunction.
+      </script>
+</body>
+</html>

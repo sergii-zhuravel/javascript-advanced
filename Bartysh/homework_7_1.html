@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="todo-input" value="Placeholder" /> <button id="button-add">Add</button>
+        <p>ToDo List:</p>
+        <ol id="todo-list">
+            <li class="todo-item">
+                First todo
+                <span class="delete-button" onclick="removeItem(event)" title="Delete current item">x</span>
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        // Написать JavaScript код, который:
+        // 1. Найдет todo-input и получит значение введенное в поле
+        // 2. Найдет элемент li
+        // 3. Создаст deep клон элемента li
+        // 4. Поменять только текст у клона элемента li
+
+        document.getElementById('button-add').addEventListener('click', function(){
+            var clonedLi = document.getElementsByClassName('todo-item')[0].cloneNode(true);
+            clonedLi.childNodes[0].textContent = document.getElementById('todo-input').value;;
+            document.getElementById('todo-list').appendChild(clonedLi);
+        });
+    </script>
+</body>
+</html>
