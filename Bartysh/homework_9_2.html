@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+            body > div {display: none;}
+            body > div.active {display: block;}
+            .welcome_message {font-size: 20px;text-align: center;padding: 20px;}
+            .login_form {text-align: center;}
+        </style>
+</head>
+<body>
+        <div class="login_form">
+            <input type="text" id="main_input" placeholder="Введите имя">
+            <button>Ok</button>
+        </div>
+        <div class="welcome_message">
+            Добро пожаловать на наш сайт, <span></span>!<br/>
+            <button>LogOut</button>
+        </div>
+        <script>
+            // ------------------------
+            // Задача 9.2
+            // ------------------------
+            // Реализовать 9.1 с помощью localStorage
+    
+            if (localStorage.getItem('loginName')) {
+                document.getElementsByClassName('welcome_message')[0].getElementsByTagName('span')[0].innerText = localStorage.getItem('loginName');
+                document.getElementsByClassName('welcome_message')[0].classList.add('active');
+            } else {
+                document.getElementsByClassName('login_form')[0].classList.add('active');
+            };
+
+            document.getElementsByClassName('login_form')[0].getElementsByTagName('button')[0].addEventListener('click', function(){
+                var logName = document.getElementById('main_input').value;
+                if (logName.length == 0) {
+                    return false;
+                }
+                localStorage.setItem('loginName', logName);
+                location.reload();
+            })
+
+            document.getElementsByClassName('welcome_message')[0].getElementsByTagName('button')[0].addEventListener('click', function(){
+                localStorage.clear('loginName');
+                location.reload();
+            })
+
+            </script>
+</body>
+</html>
