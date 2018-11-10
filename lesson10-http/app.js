@@ -1,9 +1,11 @@
-makeRequest('https://jsonplaceholder.typicode.com/posts');
+makeRequest('https://jsonplaceholder.typicode.com/posts', 'GET', null);
+
+makeRequest(url, 'POST', 'title=foo&body=test&userId=1');
 
 function doSomethingWithConent(httpRequest) {
 
     if (httpRequest.readyState == 4) {
-        if (httpRequest.status == 200) {
+        if (httpRequest.status == 200 || httpRequest.status == 201) {
             console.log(JSON.parse(httpRequest.responseText));
         } else {
             console.error('С запросом возникла проблема.');
@@ -12,14 +14,14 @@ function doSomethingWithConent(httpRequest) {
 
 }
 
-function makeRequest(url) {
+function makeRequest(url, method, params) {
     var httpRequest = false;
 
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
         httpRequest = new XMLHttpRequest();
-        if (httpRequest.overrideMimeType) {
-            // httpRequest.overrideMimeType('text/xml');
-        }
+        // if (httpRequest.overrideMimeType) {
+        //     // httpRequest.overrideMimeType('text/xml');
+        // }
     } else if (window.ActiveXObject) { // IE
         try {
             httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
@@ -35,8 +37,8 @@ function makeRequest(url) {
         return false;
     }
     httpRequest.onreadystatechange = function () { doSomethingWithConent(httpRequest); };
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
+    httpRequest.open(method, url, true);
+    httpRequest.send(params);
 
     // for post 
     // var params = 'orem=ipsum&name=binny';
