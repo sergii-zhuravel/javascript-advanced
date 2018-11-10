@@ -1,53 +1,47 @@
-// window.addEventListener('storage', updateUIState, false); // standard way, but doesn't work in all browsers
-var event = new Event('store');
-document.addEventListener('store', updateUIState, false);
+makeRequest('https://jsonplaceholder.typicode.com/posts');
 
+function doSomethingWithConent(httpRequest) {
 
-document.addEventListener('DOMContentLoaded', function(){
-    // window.onstorage = updateUIState;
-})
-var todoItemTemplate = document.getElementById('todo-list').firstElementChild;
-
-function addItem() {
-    var input = document.getElementById('todo-input');
-    var todosCount = localStorage['todos.count'] || 0;
-    localStorage['todo.item.' + ++todosCount] = input.value;
-    localStorage['todos.count'] = todosCount;
-    input.value = '';
-    console.log('New item was added into LocalStorage');
-    document.dispatchEvent(event);
-}
-
-function updateUIState(e) {
-    var todosCount = localStorage['todos.count'] || 0;
-    if (!todosCount) return false;
-    for (var i = 1; i <= todosCount; i++) {
-        console.log(localStorage['todo.item.' + i]);
-        // var newItem = todoItemTemplate.cloneNode(true);
-        // newItem.firstChild.textContent = input.value;
+    if (httpRequest.readyState == 4) {
+        if (httpRequest.status == 200) {
+            console.log(JSON.parse(httpRequest.responseText));
+        } else {
+            console.error('С запросом возникла проблема.');
+        }
     }
+
 }
 
+function makeRequest(url) {
+    var httpRequest = false;
 
-// function getCookie(key) {
-//     var cs = document.cookie.split('; ');
-//     for(var i = 0; i <= cs.length; i++) {
-//      var cookieKeyValue = cs[i].split('=');
-//     if (cookieKeyValue[0] === key) return cookieKeyValue[1];
-//     }
-//     return null;
-//   }
+    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+        httpRequest = new XMLHttpRequest();
+        if (httpRequest.overrideMimeType) {
+            // httpRequest.overrideMimeType('text/xml');
+        }
+    } else if (window.ActiveXObject) { // IE
+        try {
+            httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) { }
+        }
+    }
 
-// function setCookie(key, value, expires) {
-//   var date  = new Date;
-//   date.setTime(date.getTime() + expires * 24 * 60 * 60 * 1000);
-//   document.cookie = key + '=' + value + ';path=/;expires=' + date.toUTCString();
-// }
+    if (!httpRequest) {
+        alert('Не вышло :( Невозможно создать экземпляр класса XMLHTTP ');
+        return false;
+    }
+    httpRequest.onreadystatechange = function () { doSomethingWithConent(httpRequest); };
+    httpRequest.open('GET', url, true);
+    httpRequest.send(null);
 
-// setCookie('age', 20, 3)
-
-
-// function deleteCookie(key) {
-//   setCookie(key, '', -1);
-// }
-// deleteCookie('age')
+    // for post 
+    // var params = 'orem=ipsum&name=binny';
+    // http.open('POST', url, true);
+    // /Send the proper header information along with the request
+    // http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    // http.send(params);
+}
