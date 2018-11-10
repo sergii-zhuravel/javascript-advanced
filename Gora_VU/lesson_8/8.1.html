@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8.1</title>
+</head>
+<body>
+<script>
+    //Задача 8.1
+    //Есть JavaScript код 
+    document.addEventListener("DOMContentLoaded", myFunction);
+    function myFunction() {
+        console.log('Hello from My Function');
+    };
+    console.log('Hello from main JS code');
+    //Вопрос: 
+    //1. В каком порядке выведется текст? 
+    //Cообщение из скрипта выведется в консоль позже, т.к. скрипты ещё загружаются, построено только DOM-дерево.
+    //2. Есть ли в коде ошибки?
+    //В AddEventListener нужно имя функции, а не вызов.
+  
+</script>
+</body>
+</html>
