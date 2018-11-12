@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>9.2</title>
+    <title>9.1</title>
+    <style>
+        .container {
+            width:250px;
+            height:90px;
+            border:1px solid black;
+            margin:10px auto;
+            padding:10px;
+            text-align:center;
+            border-radius: 5px; 
+            display: none;             
+        }
+        #name {
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name">
+        <button id="save">Save</button>
+    </div>
+    <div class="container">
+        <p id="welcome"></p>
+        <button id="log-out">Log out</button>
+    </div>
+<script>
+//Задача 9.2
+// Реализовать 9.1 с помощью localStorage    
+var div = document.getElementsByClassName("container")[0]; 
+var welcomeDiv = document.getElementsByClassName("container")[1];
+var welcomeP = welcomeDiv.firstElementChild;
+var saveBtn = document.getElementById("save");
+var logOutBtn = document.querySelector("#log-out");
+if (localStorage.getItem("loginName") == null) {
+    div.style.display = "block";
+} else {
+    welcomeDiv.style.display = "block";
+    div.style.display = "none";
+    welcomeP.innerHTML = "Welcome to our website, " + localStorage.getItem("loginName");
+};
+saveBtn.addEventListener("click",saveStorage);
+function saveStorage(){
+    var inp = document.getElementById("name");
+    var inpValue = inp.value;
+    localStorage.setItem("loginName",inpValue);
+};
+logOutBtn.addEventListener("click",removeStorage);
+function removeStorage(){
+    localStorage.removeItem("loginName");
+    location.reload();
+};
+</script>
+</body>
+</html>
