@@ -27,9 +27,11 @@ function initBoard() {
 
 function initPanel(key, todoList) {
   var panel = document.getElementById(key);
-  todoList.forEach(todo => {
-    panel.appendChild(createTodoElement(todo.id, todo.title));
-  });
+  for(var i = 0; i< todoList.length; i++ ) {
+    var currentItemObject = todoList[i];
+    var newTodoElement = createTodoElement(currentItemObject.id, currentItemObject.title);
+    panel.appendChild(newTodoElement);
+  }
 }
 
 function createTodoElement(id, title) {
