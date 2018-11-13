@@ -19,7 +19,10 @@
 // 2. Найдет элемент li
 // 3. Создаст deep клон элемента li
 // 4. Поменять только текст у клона элемента li
-
+var todo = document.getElementById("todo-input").value;
+var li = document.getElementsByTagName("li")[0];
+var clone = li.cloneNode(true);
+clone.firstChild = "New text";
 
 // ------------------------
 // Задача 7.2
