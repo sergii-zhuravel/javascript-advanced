@@ -7,8 +7,7 @@ var state = {
     this[key].push(item);
   },
   deleteItemFromState: function(key, item) {
-    var index = this[key].findIndex(element => element.id === item.id);
-    delete this[key][index];
+    this[key] = this[key].filter(element => element.id != item.id);
   },
   moveItemToOtherPanel: function(key1, key2, itemId) {
     var item = state[key1].find(element => element.id == itemId);

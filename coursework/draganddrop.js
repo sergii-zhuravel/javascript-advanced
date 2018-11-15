@@ -11,13 +11,10 @@ function drop(e) {
   e.preventDefault();
   var data = e.dataTransfer.getData("text");
   var item = document.getElementById(data);
-  console.log(state);
   if (item) {
     state.moveItemToOtherPanel(item.parentElement.id, e.target.id, item.id)
     e.target.appendChild(item);
-    console.log(state);
   } else {
     console.error('Cannot find element, event:', e)
   }
-  
 }
