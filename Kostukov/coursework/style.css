@@ -1,0 +1,35 @@
+#board{
+    width: 100%;
+    background-color: lightblue;
+  }
+  
+  span {
+    width: 90%;
+    display: inline-block;
+    border: black 1px solid;
+    margin: 4px;
+    padding: 4px;
+  }
+
+  #todo,
+  #inprogress,
+  #done {
+    width: 30%;
+    background-color: #fff;
+    border: black 1px solid;
+    float: left;
+    height: 600px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 0 10px;
+  }
+  
+  #todo {
+    border-top: red 5px solid;
+  }
+  #inprogress {
+    border-top: green 5px solid;
+  }
+  #done {
+    border-top: yellow 5px solid;
+  }
