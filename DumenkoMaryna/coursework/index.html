@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div id="board" class="board">
+      <div class="board-add" id="board-add">
+          <input class="board-add__input" id="new-todo" placeholder="Enter new todo"/>
+          <p class="board-add__error">Please Enter task title</p>
+          <button class="board-add__btn" id="addTask">Add</button>
+          <button class="board-add__btn" id="loadFromServer">Load data server</button>
+      </div>
+      <div class="board-list">
+          <div class="board-list__item">
+            <div class="board-list__header">
+              To Do
+            </div>
+            <div class="board-list__main" id="todo" ondrop="toDoNew.drop(event)" ondragover="toDoNew.allowDrop(event)"></div>
+          </div>
+          <div class="board-list__item">
+            <div class="board-list__header board-list__header__progress">
+              In progress
+            </div>
+            <div class="board-list__main" id="inprogress" ondrop="toDoNew.drop(event)" ondragover="toDoNew.allowDrop(event)"></div>
+          </div>
+          <div class="board-list__item">
+            <div class="board-list__header board-list__header__done">
+              Done
+            </div>
+            <div class="board-list__main" id="done" ondrop="toDoNew.drop(event)" ondragover="toDoNew.allowDrop(event)"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="toDoWidget.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
