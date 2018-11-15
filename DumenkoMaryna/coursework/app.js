@@ -67,4 +67,3 @@ document.getElementById("addTask").addEventListener('click', function(e) {
 document.getElementById("loadFromServer").addEventListener("click", function() {
   getToDoTask("https://jsonplaceholder.typicode.com/todos");
 })
-      
