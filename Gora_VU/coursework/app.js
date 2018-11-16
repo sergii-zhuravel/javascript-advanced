@@ -16,6 +16,27 @@ var state = {
   counter: 2
 }
 
+var sendBtn = document.querySelector("#send");
+sendBtn.onclick = function() {
+
+  state.todo = [];
+  state.inprogress = [];
+  state.done = [];
+  
+  var request = new XMLHttpRequest();
+  request.open("GET","https://jsonplaceholder.typicode.com/todos" );
+  request.send();
+  request.onreadystatechange = function() {
+     if (request.readyState==4 && request.status==200) {
+        var arr = JSON.parse(request.responseText);
+        for (var i=0;i<arr.length;i+=1) {
+          state.addItemToState("todo",arr[i]);
+        }
+      initPanel('todo', state.todo);
+      }
+  }
+}
+
 var toSt = document.getElementById("toSt");
 
 toSt.onclick = function(){
