@@ -1,0 +1,63 @@
+#board{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#todo,#inprogress,#done {
+  min-height:450px;
+  width: 33%;
+  background-color: #383838;
+  float: left;
+  margin: 0 10px;
+  border-radius:5px;
+  color: white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.7);
+}
+span {
+  width: 98%;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 4px;
+  padding: 4px;
+  background-color: rgb(109, 108, 108);
+  cursor: pointer;
+}
+span:hover {
+  background-color:rgb(153, 152, 152);
+}
+span > i {
+  float: right;
+  color: rgba(253, 152, 152, 0.3);
+  cursor: pointer;
+}
+span > i:hover {
+  color: rgb(249, 77, 77);
+}
+#panel,#toSt {
+  margin: 10px 15px;
+}
+#todo {
+  border-top: #ff3a3a 5px solid;
+}
+#inprogress {
+  border-top: #ff5000 5px solid;
+}
+#done {
+  border-top: #a5ff5b 5px solid;
+}
+body {
+  background-color: #f9f9f9;
+}
+button {
+  border:none;
+  background-color: #0066c6;
+  border-radius:5px;
+  padding: 7px;
+  color:white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.7);
+  cursor:pointer;
+}
+#new-todo {
+  height:22px;
+  border-radius: 5px;
+}
