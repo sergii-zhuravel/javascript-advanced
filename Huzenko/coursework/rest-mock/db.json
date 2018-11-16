@@ -1,0 +1,14 @@
+{
+	"state":{
+  		"todo": [ 
+              {"id":1,"title":"First todo item"}
+  			],
+		  "inprogress": [
+		  			{"id": 3, "title": "Test inprogress 1"}
+		  ],
+		  "done": [
+					{"id": 4, "title": "Test done 1"}
+		  ], 
+		  "itemId":4
+	}
+}

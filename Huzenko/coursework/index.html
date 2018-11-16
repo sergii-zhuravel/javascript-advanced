@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="panel">
+    <input id="new-todo" placeholder="Enter new todo"/>
+    <button id="addBtn" onclick="newTodoItem()">Add new</button>
+    <button onclick="downloadItems()">Download</button>
+  </div>
+  <hr/>
+  <div id="board">
+  
+    <div id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h1>To do&#9998;</h1>
+    </div>
+  
+    <div id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h1>In progress&uArr;</h1>
+    </div>
+  
+    <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h1>Done&#10004;</h1>
+    </div>
+  
+  </div>
+  <script src="draganddrop.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

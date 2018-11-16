@@ -1,0 +1,86 @@
+#board{
+  width: 100%;
+  background-color: lightblue;
+}
+
+.itemElement {
+  width: 90%;
+  display: inline-block;
+  border: black 1px solid;
+  margin: 4px;
+  padding: 4px;
+}
+
+span {
+  float: right;
+}
+
+#todo {
+  width: 30%;
+  background-color: white;
+  border: black 1px solid;
+  border-top: red 5px solid;
+  float: left;
+  height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+  background: #E0FFFF;
+}
+#inprogress {
+  width: 30%;
+  background-color: #ffffff;
+  border: black 1px solid;
+  border-top: green 5px solid;
+  float: left;
+  height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+  background: #E0FFFF;
+}
+#done {
+  width: 30%;
+  background-color: white;
+  border: black 1px solid;
+  border-top: yellow 5px solid;
+  float: left;
+  height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+  background: #E0FFFF;
+}
+button {
+  border-radius: 20px;
+  width: 100px;
+  height: 25px;
+  letter-spacing: 1px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  background-color: #7FFFD4;
+}
+button:hover {
+  background-color:#2EE59D;
+}
+button:active {
+  color: #fff;
+  transform: translateY(4px);
+}
+input {
+  width: 300px;
+  font-size: 13px;
+  padding: 6px 0 4px 10px;
+  border: 1px solid #cecece;
+  background: #F6F6f6;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 2px;
+  font-size: 20px;
+
+}
