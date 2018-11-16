@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="login">
+        <input type="text" id="loginName" placeholder="Ведите имя">
+        <button onclick="login()">Ok</button>
+    </div>
+    <div class="logout">
+        <button onclick="logout()">Logout</button>
+    </div>
+    <style>
+        div{
+            display: none;
+        }
+        div.active{
+            display: block;
+        }
+    </style>
     <script src="script.js"></script>
 </body>
 </html>
