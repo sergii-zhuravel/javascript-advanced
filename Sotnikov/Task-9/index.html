@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .login_block, .greeting_block {
+            display: flex;
+            justify-content: center;
+        }
+        .greeting_block {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            align-items: center;
+        }
+    </style>
+    <div class="login_block" id="login_block">
+        <input type="text" id="nameUser"><button class="login" id="login">Log in</button>
+    </div>
+    <div class="greeting_block" id="greeting_block" style="display: none">
+        <span class="greeting_text">Добро пожаловать на наш сайт</span>
+        <button class="logout" id="logout">Log out</button>
+    </div>
+    <script src="task-9.js"></script>
+</body>
+</html>
