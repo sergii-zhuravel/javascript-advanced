@@ -1,0 +1,17 @@
+https://www.w3schools.com/quiztest/quiztest.asp?Qtest=HTML
+
+Result:
+28 of 40
+70%
+
+https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS
+
+Result:
+15 of 25
+60%
+
+https://www.w3schools.com/quiztest/quiztest.asp?qtest=JavaScript
+
+Result:
+22 of 25
+88%
