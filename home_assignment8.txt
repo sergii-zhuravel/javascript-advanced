@@ -1,7 +1,7 @@
 ------------------------
 Задача 8.1
 ------------------------
-Есть JavaScript код 
+Есть JavaScript код
 <script>
   document.addEventListener("DOMContentLoaded", myFunction());
   function myFunction() {
@@ -10,7 +10,7 @@
   console.log('Hello from main JS code');
 </script>
 
-Вопрос: 
+Вопрос:
 1. В каком порядке выведется текст?
 2. Есть ли в коде ошибки?
 
@@ -24,8 +24,6 @@ HTML страница home_assignment.html в которой есть JavaScript
 Необходимо выполнить задания которые описаны в коде в виде комментариев, а именно:
 1. Дописать функцию addItem
 2. Написать реализацию функции removeItem
-
-Опционально (не обязательно)
 3. Выполнить весь код при событии DOMContentLoaded
 
 
