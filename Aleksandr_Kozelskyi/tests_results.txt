@@ -1,0 +1,3 @@
+HTML: 33 of 40 82%
+CSS: 22 of 25 88%
+JavaScript: 17 of 25 68%
