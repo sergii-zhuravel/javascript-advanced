@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #100a1c;
+    background-image:
+      radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+      radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #6cacc5;
+}
+
+.box {
+    margin-top: 100px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    margin: 2px;
+    cursor: pointer;
+    background: rgba(42,50,113, .28);
+    color: white;
+    border: none;
+}
+
+.textview {
+    width: 255px;
+    margin: 5px;
+    font-size: 25px;
+    padding: 5px;
+    border: none;
+    color: black;
+}
