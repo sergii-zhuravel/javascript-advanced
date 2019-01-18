@@ -1,0 +1,14 @@
+HTMl
+Result:
+32 of 40
+80%
+
+CSS
+Result:
+21 of 25
+84%
+
+JS
+Result:
+20 of 25
+80%
