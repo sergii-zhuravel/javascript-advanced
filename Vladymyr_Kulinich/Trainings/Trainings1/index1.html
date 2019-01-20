@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Car Constructors</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      function Car(model, wheels, color, engine) {
+        this.model = model;
+        this.wheels = wheels;
+        this.color = color;
+        this.engine = engine;
+      }
+      var Mazda = new Car("Mazda", 4, "Red", "EngineOn");
+      var Ford = new Car("Ford", 4, "Blue", "EngineOff");
+
+      document.getElementById("demo").innerHTML =
+        "My car color is " +
+        Mazda.color +
+        ". My wife car color is " +
+        Ford.color +
+        ".";
+    </script>
+  </body>
+</html>

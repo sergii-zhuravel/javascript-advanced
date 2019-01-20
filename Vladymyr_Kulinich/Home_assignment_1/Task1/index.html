@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Task 1</h2>
+
+<p id="demo">Результат сравнения: </p>
+
+<script>
+var a = Math.floor(Math.random() * 10);
+var b = prompt("Введите число от 0 до 9", 0);
+function comparisonNumbers(){
+    if (a == b){(document.getElementById("demo").innerHTML = "Угадал");
+} else {document.getElementById("demo").innerHTML = "Не угадал, повезет в следующий раз";
+};
+}
+comparisonNumbers();
+</script>
+
+</body>
+</html>
