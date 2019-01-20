@@ -1,0 +1,29 @@
+.wrapper {
+	margin: 0 auto;
+	width: 132px;
+}
+
+button {
+	width: 30px;
+	height: 30px;
+}
+
+#res {
+	width: 100%;
+	height: 30px;
+	margin-top: 4px;
+}
+
+p {
+	width: 128px;
+}
+
+input {
+	width: 128px;
+	height: 30px;
+	margin-top: 4px;
+}
+
+#operand2 {
+	margin-bottom: 4px; 
+}
