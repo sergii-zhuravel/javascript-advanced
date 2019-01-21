@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Обьект</title>
+  </head>
+  <body>
+    <script>
+      function CarWithAutomaticTransmission(wheels, color) {
+        this.wheels = wheels || 4;
+        this.color = color || "black";
+        this.engineOn = false;
+        this.transmission = 'parking';
+        this.setTransmission = function(p) {
+          this.transmission = p;
+        };
+        this.switchEngine = function() {
+          if (this.engineOn) {
+            console.log("Turning engine off");
+            this.engineOn = false;
+          } else {
+            console.log("Turning engine on");
+            this.engineOn = true;
+          }
+        };
+        this.drive = function() {
+          this.switchEngine();
+          if(this.transmission == 'parking'){
+            this.transmission = 'drive'
+          }else{
+            this.transmission = 'parking'
+          }
+          console.log("Im driving. I'm a " + this.color + " car " + "and my transmission is " + this.transmission);
+        };
+      }
+
+      audi = new CarWithAutomaticTransmission(4, "red");
+
+      audi.drive();
+
+
+    </script>
+
+    <h1>Обьект</h1>
+    <menu>
+      <ul>
+        <li><a href="gausse.html">Угадай число</a></li>
+        <li><a href="calc.html">Javascript калькулятор</a></li>
+        <li><a href="palindrom.html">Палиндром</a></li>
+        <li><a href="object.html">Автоматическая коробка передачь</a></li>
+      </ul>
+    </menu>
+  </body>
+</html>

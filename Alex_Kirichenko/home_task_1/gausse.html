@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+    <title>Угадай число</title>
+  </head>
+  <body>
+
+    <script>
+      var number = Math.floor(Math.random() * Math.floor(10));
+      number == 0 ? (number = 1) : (number = number);
+      function wrong(){
+            var choice = confirm("Хотите попробовате еще?");
+            choice == true ? guess() : alert("Повезет в следующий раз");
+      }
+      function guess() {
+        var userTry = +prompt("Угадайте число от 1 до 10");
+        console.log(typeof(userTry))
+        if(userTry <= 0 || userTry > 10){
+            alert("Вы ввели некоректные данные");
+            wrong();
+        }
+        else if(userTry == number) {
+          alert("Угадал");
+        } else {
+          wrong();
+        }
+      }
+      guess();
+    </script>
+
+    <h1>Угадай число</h1>
+    <menu>
+      <ul>
+        <li><a href="gausse.html">Угадай число</a></li>
+        <li><a href="calc.html">Javascript калькулятор</a></li>
+        <li><a href="palindrom.html">Палиндром</a></li>
+        <li><a href="object.html">Автоматическая коробка передачь</a></li>
+      </ul>
+    </menu>
+  </body>
+</html>
