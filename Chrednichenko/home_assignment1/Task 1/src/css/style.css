@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(44, 44, 44);
+}
+
+.box1 {
+    width: 350px;
+    height: 200px;
+    padding: 10px;
+    line-height: 30px;
+    border: 2px solid rgb(117, 117, 117);
+    text-align: center;
+    margin-top: 150px;
+    background-color: white;
+}
+
+#cnt {
+    color: brown;
+    font-weight: bold;
+}
+
+#result {
+    font-weight: bold;
+    color: red;
+}
