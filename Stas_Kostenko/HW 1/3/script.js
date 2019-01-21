@@ -1,16 +1,17 @@
 
 
-function checkPal(str){
-    str = str.replace( /\s/g, "");
+function checkPal(str) {
+    str = str.replace(/\s/g, "");
     var arr = str.split("");
     var arr2 = str.split("").reverse();
-    for( var i = 0; i < arr.length; i++){
-            if(arr[i] == arr2[i]){
-            return true;
-             } else {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == arr2[i]) {
+            
+        } else {
             return false;
-             }
+        }
     }
+    return true;
 }
 
 
