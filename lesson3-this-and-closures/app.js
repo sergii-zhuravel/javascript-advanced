@@ -2,6 +2,12 @@
 // myCar.make = 'ZAZ';
 // myCar.model = 'Tavria';
 // myCar.year = '1989';
+// myCar
+// console.log(myCar.hasOwnProperty('model'))
+
+// if (myCar.hasOwnProperty('model')) {
+//   console.log(myCar.hasOwnProperty('model'));
+// }
 
 //////////////////////////
 
@@ -14,12 +20,44 @@
 /////////////////////////
 
 // var o = Object.create()
-
+// delete test;
 // function testFunction() {
-//     console.log(this)
+//     console.log(this);
+//     console.log(this.test);
 // }
 
-// testFunction()
+// test = "Hello"
+// //testFunction()
+
+// var myObject = {
+//   test: "Hello from my object",
+//   testFunction: testFunction
+// }
+
+// myObject.testFunction()
+
+var robot = {
+  name: "QBot",
+  humanLike: false,
+  greating: function() {
+    console.log("Hello, I'm a " + this.name + " - " + (this.humanLike ? "human like" : "not a human like") + "robot");
+  }
+}
+
+var robot2 = {
+  name: "Rbot",
+  humanLike: true
+}
+
+var outerFuntion = robot.greating;
+//outerFuntion.call(robot);
+//outerFuntion.call(null, 1, 2);
+var m = [4, 5, 6, 2, 9];
+console.log(Math.max.call(null, 3, 4, 1));
+console.log(Math.max.apply(null, m));
+
+
+//robot.greating();
 
 ////////////////////////
 // method borrowing
