@@ -39,8 +39,8 @@
 var robot = {
   name: "QBot",
   humanLike: false,
-  greating: function() {
-    console.log("Hello, I'm a " + this.name + " - " + (this.humanLike ? "human like" : "not a human like") + "robot");
+  greating: function(a, b) {
+    console.log("Hello, I'm a " + this.name + " - " + (this.humanLike ? "human like " : "not a human like ") + "robot");
   }
 }
 
@@ -49,12 +49,28 @@ var robot2 = {
   humanLike: true
 }
 
-var outerFuntion = robot.greating;
+function myBind (func, context) {
+  var args = [].slice.call(arguments);
+
+  var returnFunction = function() {
+    return func.apply(context, args);
+  }
+  return returnFunction;
+}
+
+var test = myBind(robot.greating, robot2);
+
+test(1, 3);
+
+// var outerFunction = robot.greating.bind(robot, 2, 1);
+// outerFunction(3)
+// console.log(outerFuntion == robot.greating)
+
 //outerFuntion.call(robot);
 //outerFuntion.call(null, 1, 2);
-var m = [4, 5, 6, 2, 9];
-console.log(Math.max.call(null, 3, 4, 1));
-console.log(Math.max.apply(null, m));
+// var m = [4, 5, 6, 2, 9];
+// console.log(Math.max.call(null, 3, 4, 1));
+// console.log(Math.max.apply(null, m));
 
 
 //robot.greating();
