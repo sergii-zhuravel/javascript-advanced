@@ -19,9 +19,9 @@ function CarWithManulTransmission(model, wheels, color) {
   this.drive = function() {
     this.switchEngine();
     this.setTransmission(1);
-    this.model = prompt("Car model?", this.model);
+    this.model = prompt("Car model with manual transmission?", this.model);
     this.color = prompt("Car color?", this.color);
-    console.log("Im driving. I'm a " + this.color + " car");
+    console.log("Im driving on " + this.model + ". I'm a " + this.color + " car");
     var body = document.querySelector("body");
     var p1 = document.createElement("p");
     var p2 = document.createElement("p");
@@ -56,9 +56,9 @@ function CarWithAutomaticTransmission(model, wheels, color) {
   this.drive = function() {
     this.switchEngine();
     console.log("Im driving. I'm a " + this.color + " car");
-    this.model = prompt("Car model?", this.model);
+    this.model = prompt("Car model with automatic transmission?", this.model);
     this.color = prompt("Car color?", this.color);
-    console.log("Im driving. I'm a " + this.color + " car");
+    console.log("Im driving on " + this.model + ". I'm a " + this.color + " car");
     var body = document.querySelector("body");
     var p1 = document.createElement("p");
     var p2 = document.createElement("p");
@@ -75,10 +75,13 @@ function CarWithAutomaticTransmission(model, wheels, color) {
   };
 }
 
-mazda = new CarWithManulTransmission(4, "red");
-ford = new CarWithManulTransmission(4, "blue");
-audi = new CarWithAutomaticTransmission(4, "grey");
-lexus = new CarWithAutomaticTransmission(4, "grey");
+mazda = new CarWithManulTransmission("Mazda", 4, "red");
+ford = new CarWithManulTransmission("Ford", 4, "blue");
+audi = new CarWithAutomaticTransmission("Audi", 4, "grey");
+lexus = new CarWithAutomaticTransmission("Lexus", 4, "grey");
+
+mazda.drive();
+lexus.drive();
 
 carManual = new CarWithManulTransmission();
 carAutomatic = new CarWithAutomaticTransmission();
