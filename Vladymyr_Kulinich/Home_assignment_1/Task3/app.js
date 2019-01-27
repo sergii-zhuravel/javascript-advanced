@@ -1,11 +1,13 @@
-//Не работает
-var words = [prompt("Введите число палиндром")];
-var rev = words.reverse();
-function palindrom() {
-  if (words == rev) {
-    document.writeln("Вы ввели палиндром");
+function isPalindrome(str) {
+  var strLen = str.length,
+    strReverse = str
+      .split("")
+      .reverse()
+      .join("");
+  if (strReverse == str) {
+    return "Слово является палиндромом";
   } else {
-    document.writeln("Слово не палиндром");
+    return "Слово не является палиндромом";
   }
 }
-palindrom();
+document.writeln(test = isPalindrome(prompt("Введите слово палиндром")));
