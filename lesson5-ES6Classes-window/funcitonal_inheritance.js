@@ -21,6 +21,7 @@ function Hero(name, level) {
 
 // Initialize Warrior constructor
 function Warrior(name, level, weapon) {
+  'use strict'
   // Chain constructor with call
   Hero.call(this, name, level);
   //  {
@@ -30,9 +31,10 @@ function Warrior(name, level, weapon) {
   // Add a new property
   this.weapon = weapon;
   this.exp = 0;
-  var parentLevelUp = this.leveUp;
+  var parentLevelUp = this.leveUp.bind(this);
+  var _self = this;
   this.leveUp = function(level) {
-    if (this.exp > 1000) {
+    if (_self.exp > 1000) {
       parentLevelUp(1);
     } else {
       parentLevelUp(level);
@@ -49,6 +51,10 @@ console.log(mikita._level)
 mikita.leveUp(3)
 console.log(mikita._level)
 
+var myFunc = mikita.leveUp;
+
+myFunc(5);
+console.log(mikita._level)
 // Initialize Healer constructor
 function Healer(name, level, spell) {
   Hero.call(this, name, level);

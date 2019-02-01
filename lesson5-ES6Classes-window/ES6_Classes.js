@@ -1,6 +1,6 @@
 class Rectangle {
   // only one
-  // super
+  // super()
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -8,66 +8,71 @@ class Rectangle {
 }
 
 // Hoisting
-// const p = new Rectangle(); // ReferenceError
-
-// class Rectangle {}
-
-
-// не bменований
-let Rectangle = class {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
-};
+// var p = new Rectangle(10,20);
+// p
+// class Rectangle2 {}
 
 
-// methods
-class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+// // не bменований
+// var Rectangle = class {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+// };
+
+
+// // methods
+// class Polygon {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
   
-  get area() {
-    return this.calcArea();
-  }
+//   get area() {
+//     return this.calcArea();
+//   }
 
-  calcArea() {
-    return this.height * this.width;
-  }
-}
+//   calcArea() {
+//     return this.height * this.width;
+//   }
+// }
 
-const square = new Polygon(10, 10);
+// const square = new Polygon(10, 10);
+// square
 
-console.log(square.area);
-
-
-// static methods
+// console.log();
 
 
-// inherritance
-class Animal { 
-  constructor(name) {
-    this.name = name;
-  }
+
+// // // static methods
+
+
+// // inherritance
+// class Animal { 
+//   constructor(name) {
+//     this.name = name;
+//   }
   
-  speak() {
-    console.log(this.name + ' makes a noise.');
-  }
-}
+//   speak() {
+//     console.log(this.name + ' makes a noise.');
+//   }
+// }
 
-class Dog extends Animal {
-  speak() {
-    console.log(this.name + ' barks.');
-  }
-}
+// class Dog extends Animal {
+//   speak() {
+//     console.log(this.name + ' barks.');
+//   }
+// }
+
+// var bim = new Dog('Bim');
+// console.log(bim instanceof Animal)
 
 
 // with classic
 
 function Animal (name) {
-  this.name = name;  
+  this.name = name;
 }
 Animal.prototype.speak = function () {
   console.log(this.name + ' makes a noise.');
@@ -81,4 +86,5 @@ class Dog extends Animal {
 }
 
 var d = new Dog('Mitzie');
-d.speak();
+d
+console.log(d.speak());
