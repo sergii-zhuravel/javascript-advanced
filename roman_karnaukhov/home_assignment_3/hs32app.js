@@ -1,25 +1,20 @@
+function sum() {
+  // суммирует аргументы: sum(1,2,3) = 6
+  return [].reduce.call(arguments, function(a, b) {
+    return a + b;
+  });
+}
 
-// var pizza = {
-//   toppings: ('cheese, bacon, tomatoes'),
-//   bortik: false,
-//   size: 'mid',
-//   makePizza: function () {
-//     return console.log(this.size + ' pizza with ' + (this.bortik ? 'bortik' : 'no bortik') + ' and with ' + this.toppings + ' toppings !')
-//   },
-//   packPizza: function () {
-//     return console.log('Pizza packed into ' + this.size + ' box.')
-//   },
-// }
+function applyAll(func, a) {
+  var arrArg = [],
+    i;
+  for (i = 0; i < arguments.length - 1; i++) {
+    arrArg[i] = arguments[1 + i];
+  }
+  return func.apply(func, arrArg);
+}
 
-function applyAll (func, a, b, c) {
-  //for (i = 1; i < arguments.length; i++) {}
-  //var ff = func.call (a, b, c);
-  //return ff;
-}; 
-
-//console.log (applyAll);
-//console.log (applyAll (Math.max, 2, 3, 5));
-applyAll (Math.max, 3, 6, 5, 8);
+console.log(applyAll(sum, 10, 5, 7));
 
 // ------------------------
 // Задача 3.2
@@ -37,7 +32,6 @@ applyAll (Math.max, 3, 6, 5, 8);
 // alert( applyAll(Math.min, 2, -2, 3) ); // -2
 // Область применения applyAll, конечно, шире, можно вызывать её и со своими функциями:
 
-
 // function sum() { // суммирует аргументы: sum(1,2,3) = 6
 //   return [].reduce.call(arguments, function(a, b) {
 //     return a + b;
@@ -53,8 +47,4 @@ applyAll (Math.max, 3, 6, 5, 8);
 // console.log( applyAll(sum, 1, 2, 3) ); // -> sum(1, 2, 3) = 6
 // console.log( applyAll(mul, 2, 3, 4) ); // -> mul(2, 3, 4) = 24
 
-// ------------------------
-// Задача 3.3
-// ------------------------
 
-// Привести пример использования привязки контекста с помощью call/apply/bind
