@@ -16,5 +16,7 @@
 // Задача 6.2
 // ------------------------
 // Как получить доступ к стилям последнего элемента тега body?
+var bodyLastChildStylu = getComputedStyle(document.body.lastElementChild)
 // Как проверить что в body вообще есть элементы?
 // (написать код)
+document.body.childNodes.length
