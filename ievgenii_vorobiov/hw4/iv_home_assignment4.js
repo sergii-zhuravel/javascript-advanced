@@ -4,25 +4,27 @@
 // Написать функцию makeAdder(n) которая получает целое число и возвращает функцию которая увеличивает переданный ей
 // параметр на заданное заранее значение (использовать замыкание)
 
+function makeAdderShort (n){ return (a) => a == undefined ? result : result = n + a; };
+
 function makeAdder (n){
-	return (a) => n + a;
-};
-
-// function makeAdder (n){
-// 	function sum (a){
-// 		return n + a;
-// 	}
-// 	return sum;
-// }
-
-
- 
+	function sum (a){
+		if (a == undefined){
+			return result
+		}
+		return result  = n + a;
+	}
+	return sum;
+}
 
 // Пример вызова функций:
 var add10 = makeAdder(10)
 console.log(add10(25)) // должно вывести 35
+console.log(add10()) // должно вывести 35
 
-
+//Пример вызова функций Short Type:
+var add10s = makeAdderShort(10)
+console.log(add10s(25)) // должно вывести 35
+console.log(add10s()) // должно вывести 35
 
 // ------------------------
 // Задача 4.2
