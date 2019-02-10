@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><span>Browser name: </span><span id="brows">BROWSERNAME</span></div>
+    <script>
+      var browser,
+        uAgent = navigator.userAgent;
+
+      if (uAgent.indexOf("Chrome") > -1) {
+        browser = "Google Chrome";
+      } else if (uAgent.indexOf("Safari") > -1) {
+        browser = "Apple Safari";
+      } else if (uAgent.indexOf("Opera") > -1) {
+        browser = "Opera";
+      } else if (uAgent.indexOf("Firefox") > -1) {
+        browser = "Mozilla Firefox";
+      } else if (uAgent.indexOf("MSIE") > -1) {
+        browser = "Microsoft Internet Explorer";
+      }
+
+      document.getElementById("brows").innerHTML = browser;
+    </script>
+  </body>
+</html>
