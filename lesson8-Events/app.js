@@ -4,7 +4,7 @@
  function linkClick(event) {
    console.log(event.currentTarget);
    event.stopPropagation();
-   event.preventDefault();
+  //  event.preventDefault();
   }
 
 var display = document.getElementById('display');
