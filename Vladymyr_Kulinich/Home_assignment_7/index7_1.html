@@ -1,0 +1,51 @@
+<!-- Над этим еще работаю -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input id="todo-input" value="Placeholder" />
+      <button id="button-add" onclick="myValue()">Add</button>
+      <p>Clone point:</p>
+      <button id="clone" onclick="myClone()">Clone</button>
+      <p>ToDo List:</p>
+      <ol id="todo-list">
+        <li class="todo-item">
+          First todo
+          <span
+            class="delete-button"
+            onclick="removeItem(event)"
+            title="Delete current item"
+            >x</span
+          >
+        </li>
+        <li class="todo-item">
+            Second todo
+            <span
+              class="delete-button"
+              onclick="removeItem(event)"
+              title="Delete current item"
+              >x</span
+            >
+          </li>
+      </ol>
+    </div>
+    <script>
+      function myValue() {
+        var x = document.getElementById("todo-input").value;
+        document.getElementById("todo-list").innerHTML = x;
+      }
+      function myClone() {
+        var y = document.getElementById("todo-list").lastChild;
+        var cln = y.cloneNode(true);
+        var textnode = document.createTextNode("Fixed task");        
+        cln.appendChild(textnode);                              
+        document.getElementById("todo-list").appendChild(cln);
+      }
+    </script>
+  </body>
+</html>

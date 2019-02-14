@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body id="myList">
+    <p class="paragraph" id="1" style="background-color : red">First</p>
+    <p class="paragraph" id="2" style="background-color : green">Second</p>
+    <p class="paragraph" id="3" style="background-color : blue">Third</p>
+    <p class="paragraph" id="4" style="background-color : yellow">Fourth</p>
+  </body>
+  <script>
+    // Как получить доступ к стилям последнего элемента тега body?
+      var last = document.querySelectorAll("p").lastElementChild.style;
+    // Как проверить что в body вообще есть элементы?
+    var elem = document.querySelectorAll("body");
+    console.log(elem);
+  </script>
+</html>
