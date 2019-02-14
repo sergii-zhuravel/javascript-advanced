@@ -7,17 +7,16 @@
   console.log('Hello from main JS code');
 </script> -->
 
-Вопрос:
-1. В каком порядке выведется текст?
-2. Есть ли в коде ошибки?
-
+Вопрос: 1. В каком порядке выведется текст? - первым выведется 'Hello from My
+Function', вторым 'Hello from main JS code' 2. Есть ли в коде ошибки? Ошибки
+исправлены в коде ниже:
 
 <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        function myFunction() {
-          console.log('Hello from My Function');
-        }
-        myFunction();
-        console.log('Hello from main JS code');
-    });
+  document.addEventListener("DOMContentLoaded", function() {
+    function myFunction() {
+      console.log("Hello from My Function");
+    }
+    myFunction();
+    console.log("Hello from main JS code");
+  });
 </script>
