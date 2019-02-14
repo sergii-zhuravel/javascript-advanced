@@ -1,0 +1,51 @@
+    <div>
+        <input id="todo-input" value="Placeholder" /> <button id="button-add">Add</button>
+        <p>ToDo List:</p>
+        <ol id="todo-list">
+            <li class="todo-item">
+                First todo
+                <span class="delete-button" onclick="removeItem(event)" title="Delete current item">x</span>
+            </li>
+        </ol>
+    </div>
+    <script>
+    // найдем To-Do Input value.
+    var toDoIm = document.getElementById ('todo-input').value;  
+    // найдем li...
+    var liElem = document.getElementsByClassName ("todo-item") [0];
+    // clone li...
+    var liElemClone = liElem.cloneNode (true);
+    // меняем текст у клона...
+    liElemClone.firstChild.textContent = 'new text ';
+    liElemClone.firstElementChild.textContent = 'y';
+    liElem.parentNode.appendChild (liElemClone);
+    </script>
+</body>
+
+
+
+<!--
+------------------------
+Задача 7.1
+------------------------
+Дано:
+HTML страница в которой есть только такой код
+<div>
+    <input id="todo-input" value="Placeholder" /> <button id="button-add">Add</button>
+    <p>ToDo List:</p>
+    <ol id="todo-list">
+        <li class="todo-item">
+            First todo
+            <span class="delete-button" onclick="removeItem(event)" title="Delete current item">x</span>
+        </li>
+    </ol>
+</div>
+
+Написать JavaScript код, который:
+1. Найдет todo-input и получит значение введенное в поле
+2. Найдет элемент li
+3. Создаст deep клон элемента li
+4. Поменять только текст у клона элемента li
+
+-->
+
