@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var str = prompt('Enter a word or phrase:'),		
+			string = str.toLowerCase().replace(/\s+/g,''),
+			stringReverse = string.split('').reverse().join('');
+
+		function checkPalindrome() {
+			if (stringReverse == string) {
+				alert('It\'s polindrome');
+			} else {
+				alert('It isn\'t polindrome');
+			}
+		}
+
+		checkPalindrome();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

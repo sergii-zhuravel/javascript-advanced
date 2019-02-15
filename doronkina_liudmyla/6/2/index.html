@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			var computedStyle = getComputedStyle(document.body.lastElementChild);
+			alert('color: ' + computedStyle.color);
+			alert('text-transform: ' + computedStyle.textTransform);
+
+			if (document.body.children.length) {
+				alert('body has ' + document.body.children.length + ' children');
+			} else {
+				alert('body doesn\'t have children');
+			}
+		}
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+
+	<div style="color: red; text-transform: uppercase;">Some text</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		'use strict';
+
+		class Bank {
+			constructor() {
+				this.country = 'Ukraine';
+				this.name = 'Privat';
+				this.account = 1234567890;
+				this.password = 1111;
+			}
+
+			enterPassword() {
+				return 'Enter password:';
+			}
+
+			checkPassword() {
+				return (this.password === 1111) ? 'Your password right.' : 'Your password wrong.';
+			}
+		}
+
+		class Cabinet extends Bank {
+			getMoney() {
+				return 'Withdraw money from the account.';
+			}
+
+			putMoney() {
+				return 'Put money into the account.';
+			}
+
+			checkMoney() {
+				return 'Check account balance';
+			}
+		}
+
+		class User extends Cabinet {
+			openCabinet() {
+				prompt(this.enterPassword(), 1111);
+				alert(this.checkPassword());
+				confirm(this.getMoney());
+				confirm(this.putMoney());
+				confirm(this.checkMoney());
+			}
+		}
+
+		var user = new User();
+		user.openCabinet();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
