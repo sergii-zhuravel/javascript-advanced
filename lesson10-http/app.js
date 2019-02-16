@@ -1,13 +1,16 @@
-var url = 'https://jsonplaceholder.typicode.com/posts'
-makeRequest(url, 'GET', null);
+// var url = 'https://jsonplaceholder.typicode.com/posts'
 
-makeRequest('https://jsonplaceholder.typicode.com/posts', 'POST', 'title=foo&body=test&userId=1');
+// makeRequest('https://www.meteoprog.ua/ru/api/city/Kyiv', 'GET', null);
+// makeRequest(url, 'GET', null);
+
+// makeRequest('https://jsonplaceholder.typicode.com/posts', 'POST', 'title=foo&body=test&userId=1');
 
 function doSomethingWithConent(httpRequest) {
 
     if (httpRequest.readyState == 4) {
         if (httpRequest.status == 200) {
             var obj = JSON.parse(httpRequest.responseText);
+            console.log(obj);
         } else if(httpRequest.status == 201) {
             var getUrl = url + '/' + JSON.parse(httpRequest.responseText).id;
             makeRequest(getUrl, "GET", null);

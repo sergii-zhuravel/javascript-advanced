@@ -1,6 +1,5 @@
 var url = 'https://jsonplaceholder.typicode.com/posts'
 // makeRequest(url, 'GET', null);
-
 // makeRequest('https://jsonplaceholder.typicode.com/posts', 'POST', 'title=foo&body=test&userId=1');
 
 function doSomethingWithConent(httpRequest) {
