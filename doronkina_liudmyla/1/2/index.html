@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		form {
+			width: 131px;
+			margin: 0 auto;
+		}
+		input {
+			display: block;
+		}
+		div {
+			margin: 10px 0 5px;
+			display: flex;
+			justify-content: space-between;
+		}
+		button {
+			width: 131px;
+		}
+		p {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="text" name="" id="firstNumber">
+		<input type="text" name="" id="secondNumber">
+		<div>
+			<input type="button" name="" onclick="add()" value="+">
+			<input type="button" name="" onclick="sub()" value="-">
+			<input type="button" name="" onclick="mul()" value="*">
+			<input type="button" name="" onclick="div()" value="/">
+		</div>
+		<button>C</button>
+		<p id="res"></p>
+	</form>
+	<script type="text/javascript">
+		function add() {
+			document.getElementById('res').innerHTML = +document.getElementById('firstNumber').value + +document.getElementById('secondNumber').value;
+		}
+		function sub() {
+			document.getElementById('res').innerHTML = +document.getElementById('firstNumber').value - +document.getElementById('secondNumber').value;
+		}
+		function mul() {
+			document.getElementById('res').innerHTML = +document.getElementById('firstNumber').value * +document.getElementById('secondNumber').value;
+		}
+		function div() {
+			document.getElementById('res').innerHTML = +document.getElementById('firstNumber').value / +document.getElementById('secondNumber').value;
+		}
+	</script>
+</body>
+</html>
