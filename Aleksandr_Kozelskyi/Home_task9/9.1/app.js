@@ -4,7 +4,6 @@ logInWindow.style.display = "none";
 logOutWindow.style.display = "none";
 var logInBtn = document.querySelector("#log-in-btn");
 var logOutBtn = document.querySelector("#log-out-btn");
-var logInInput = document.querySelector("#loginName");
 
 function setCookie(name, value, options) {
   options = options || {};
@@ -36,6 +35,7 @@ function getCookie(name) {
 }
 
 function addLoginName() {
+  var logInInput = document.querySelector("#loginName");
   setCookie("loginName", logInInput.value);
   document.location.reload(true);
 }

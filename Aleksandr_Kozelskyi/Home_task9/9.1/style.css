@@ -26,7 +26,7 @@ body {
   background-color: rgb(4, 88, 99);
   display: block;
   margin: 0 auto;
-  width: 550px;
+  width: 600px;
   height: 60px;
   padding: 10px;
   margin-top: 100px;
@@ -35,7 +35,8 @@ body {
 }
 
 #log-out-btn {
-  margin-left: 20px;
+  float: right;
+  margin-left: 10px;
   width: 60px;
   height: 30px;
   color: rgb(12, 77, 77);
