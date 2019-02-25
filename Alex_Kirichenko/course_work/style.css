@@ -1,0 +1,74 @@
+#board{
+    width: 100%;
+    background-color: lightblue;
+    position: relative;
+  }
+  
+  span {
+    width: 90%;
+    display: inline-block;
+    border: black 1px solid;
+    margin: 4px;
+    padding: 4px;
+  }
+  
+  #todo {
+    width: 30%;
+    background-color: white;
+    border: black 1px solid;
+    border-top: red 5px solid;
+    float: left;
+    height: 600px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 0 10px;
+  }
+  #inprogress {
+    width: 30%;
+    background-color: #ffffff;
+    border: black 1px solid;
+    border-top: green 5px solid;
+    float: left;
+    height: 600px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 0 10px;
+  }
+  #done {
+    width: 30%;
+    background-color: white;
+    border: black 1px solid;
+    border-top: yellow 5px solid;
+    float: left;
+    height: 600px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 0 10px;
+  }
+  #board span{
+    position: relative;
+  }
+  #board span i{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+  }
+  #board span i::after{
+    content: "x";
+    color: red;
+    font-style: normal;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 2px 5px;
+    background: #eee;
+    border-radius: 2em;
+    transition: all .3s;
+  }
+  #board span i:hover::after{
+    color: #000;
+    background: #fff;
+  }
+  #servDownload{
+    margin: 5px;
+    margin-left: 0;
+  }
