@@ -1,0 +1,110 @@
+#board {
+  width: 100%;
+  background-color: lightblue;
+}
+
+span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px 12px 12px 12px;
+  display: inline-block;
+  border: black 1px solid;
+  border-style: none;
+}
+/*
+  #todoContainer {
+    width: 30%;
+    background-color: white;
+    border: black 1px solid;
+    border-top: red 5px solid;
+    float: left;
+    height: 600px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 0 10px;
+  }*/
+#todo {
+  width: 30%;
+  background-color: #ffffff;
+  border: black 1px solid;
+
+  border-top: red 5px solid;
+  float: left;
+  height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+}
+#inprogress {
+  width: 30%;
+  background-color: #ffffff;
+  border: black 1px solid;
+
+  border-top: green 5px solid;
+  float: left;
+  height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+}
+#done {
+  width: 30%;
+  background-color: white;
+  border: black 1px solid;
+  border-top: yellow 5px solid;
+  float: left;
+  height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+}
+
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  border: black 1px solid;
+  padding: 10px;
+  margin: 2px 2px 2px 2px;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+span:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
