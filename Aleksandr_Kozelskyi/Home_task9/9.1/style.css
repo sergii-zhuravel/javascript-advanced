@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 20px;
+}
+
+#log-in {
+  background-color: grey;
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  height: 60px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px 2px;
+}
+
+#log-out {
+  font-size: x-large;
+  color: rgb(182, 221, 228);
+  background-color: rgb(4, 88, 99);
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  height: 60px;
+  padding: 10px;
+  margin-top: 100px;
+  border: 2px solid rgb(6, 181, 235);
+  border-radius: 6px;
+}
+
+#log-out-btn {
+  float: right;
+  margin-left: 10px;
+  width: 60px;
+  height: 30px;
+  color: rgb(12, 77, 77);
+}
