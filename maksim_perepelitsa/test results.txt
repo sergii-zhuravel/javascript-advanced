@@ -1,2 +1,0 @@
-html 34 out of 40
-css 24 out of 25
