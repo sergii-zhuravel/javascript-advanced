@@ -1,0 +1,79 @@
+#panel {
+  /* margin: auto 10px; */
+  margin: 10px 0 10px 10px;
+}
+
+#board{
+  width: 100%;
+  background-color: lightblue;
+}
+
+span {
+  width: 90%;
+  display: inline-block;
+  border: black 1px solid;
+  margin: 4px;
+  padding: 4px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 4px;
+}
+
+.closeTodo {
+  height: 28px;
+  width: 28px;
+  padding-bottom: 4px;
+  border: 1px solid black;
+  background-color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 20px;
+
+}
+#butCleanTodoUI,#butCleanTodoStorage {
+  background-color: rgba(255,0,0,0.1);
+}
+
+#butCleanInprogressUI, #butCleanInprogressStorage {
+  background-color: rgba(255,255,0,0.1);
+}
+
+#butCleanDoneUI, #butCleanDoneStorage {
+  background-color: rgba(0,255,0,0.1);
+}
+
+#todo {
+  width: 30%;
+  background-color: white;
+  border: black 1px solid;
+  border-top: red 5px solid;
+  background-color: rgba(255,0,0,0.1);
+  float: left;
+  min-height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+}
+#inprogress {
+  width: 30%;
+  background-color: #ffffff;
+  border: black 1px solid;
+  border-top: yellow 5px solid;
+  background-color: rgba(255,255,0,0.1);
+  float: left;
+  min-height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+}
+#done {
+  width: 30%;
+  background-color: white;
+  border: black 1px solid;
+  border-top: green 5px solid;
+  background-color: rgba(0,255,0,0.1);
+  float: left;
+  min-height: 600px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 10px;
+}
